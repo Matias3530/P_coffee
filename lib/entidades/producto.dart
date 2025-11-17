@@ -4,6 +4,7 @@ class Producto {
 	final double precio;
 	final String descripcion;
 	final bool disponible;
+	final int stock;
 
 	Producto({
 		required this.id,
@@ -11,5 +12,6 @@ class Producto {
 		required this.precio,
 		required this.descripcion,
 		required this.disponible,
+		required this.stock,
 	});
 }

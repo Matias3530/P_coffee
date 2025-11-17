@@ -1,0 +1,24 @@
+# Enforce LF for text files to avoid CRLF/LF warnings
+* text=auto
+
+# Force LF for specific source files used in the project
+*.dart text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.pem text eol=lf
+*.md text eol=lf
+*.swift text eol=lf
+*.kts text eol=lf
+*.gradle text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+pubspec.lock text eol=lf
+
+# Binary files - keep as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.xcframework binary

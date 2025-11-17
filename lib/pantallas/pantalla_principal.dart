@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class PantallaPrincipal extends StatelessWidget {
   const PantallaPrincipal({super.key});
@@ -13,14 +14,22 @@ class PantallaPrincipal extends StatelessWidget {
 					children: [
 						ListTile(
 							title: Text('Productos'),
-							onTap: () => Navigator.pushNamed(context, '/productos'),
+							onTap: () => context.push('/productos'),
 						),
 						ListTile(
 							title: Text('Estado de Pedidos'),
-							onTap: () => Navigator.pushNamed(context, '/estado-pedidos'),
+							onTap: () => context.push('/estado-pedidos'),
 						),
 					],
 				),
+			),
+			floatingActionButton: FloatingActionButton.extended(
+				icon: Icon(Icons.add_shopping_cart),
+				label: Text('Agregar pedido'),
+				onPressed: () {
+					// Navega a la pantalla donde se selecciona cómo se desea el pedido
+					context.push('/seleccionar-tipo-pedido');
+				},
 			),
 		);
 	}
